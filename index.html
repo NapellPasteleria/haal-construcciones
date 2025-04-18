@@ -11,7 +11,7 @@
 
     <title>Haal Construcciones</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet"/>
 
 </head>    
     
@@ -19,7 +19,7 @@
     <header>
        <div class="banner-up"> 
             <img src="./img/haal-logo.jpg" class="logo" alt="Logo Haal">
-            <a class="logo" href="index.html"></a>
+            <a href="index.html"></a>
             
             <nav class="navbar">
                  <ul>
@@ -35,30 +35,74 @@
         </div>
         
     </header>
-    
+    <hr>
+
+    <div id="miCarrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+          <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+          <button type="button" data-bs-target="#miCarrusel" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+        </div>
+      
+        <!-- Contenedor de las imágenes del carrusel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/slide-pivotante.png" class="d-block w-100" alt="fachada-pivotante">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/living-inicio.jpg" class="d-block w-100" alt="living-inicio">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/gema.png" class="d-block w-100" alt="puerta-ingreso-inicio">
+          </div>
+        </div>
+      
+        <!-- Controles anterior / siguiente -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#miCarrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#miCarrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      
     <main class="container">
         <aside class="sidebar"></aside>
         <section class="main-content">
 
-          <hr>
-          <h1>Productos Destacados</h1>
-          <img width="150" src="./img/tekna_ambiente.jpg" alt="tekna-ambiente"> 
-    
-          
-            <h2 class="titulos">Puertas de Exterior</h2>
+          <h2>Productos Destacados</h2>
+                
             <section class="mejores-modelos">
              <div class="modelos">
-                 <h3>Linea Eterna</h3>
-                 <p> (breve descriccion)</p>
-                 <img width="200" src="./img/eterna.png" alt="puerta-eterna">
+                 <h3>PUERTA DE EXTERIOR   |   Linea Eterna</h3>
+                  <p> Hojas |   
+                    • Estructura interior: bastidor de madera maciza, relleno aislante (EPS).
+                    Revestimiento exterior de acero galvanizado foliado en PVC, resistente al agua y
+                    a los rayos UV.
+                    • Tapacanto perimetral de aluminio.
+                  </p>
+
+                 <img width="300" src="./img/eterna-grafito.png" alt="puerta-eterna">
              </div>
             </section>
-            <h2 class="titulos">Puertas de Interior</h2>
+
             <section class="mejores-modelos">
              <div class="modelos">
-                 <h3>Linea Gema</h3>
-                 <p> (breve descripcion)</p>
-                 <img width="200" src="./img/gema.png" alt="puerta-gema">
+                 <h3>PUERTA DE INTERIOR   |   Linea Gema</h3>
+                 <p> Compuesta por dos paneles con listones, encolados y prensados al bastidor de madera
+                    estabilizada, con relleno de panal de abeja celulósico.
+                    Ambas caras de la puerta conformadas por listones finos o anchos de MDF de 12 mm,
+                    están revestidas con un foil melamínico con textura y veteado simil madera, o liso blanco
+                    sin textura.
+                    Puertas simple contacto.
+                    Tratamiento en los cantos superior e inferior de la hoja para mejorar la resistencia a la
+                    humedad.
+                    Modelos
+                    GEMA R, con listones finos,
+                    GEMA M, con listones anchos similares al machimbre</p>
+                 <img width="800" src="./img/linea-gema.png" alt="puerta-gema">
              </div>
            </section>
        </section>
@@ -79,16 +123,15 @@
     
         <div class="nuestros-datos"> 
             <ul>
-                <li>Telefono: 11-6379-8755</li>
-                <li>Tucuman 1151</li>
-                <li>Lanus Este, Buenos Aires</li>
-                <li>haalconstrucciones@gmail.com</li>
+             <li>Whatsapp: 11-6379-8755</li>
+             <li>Tucuman 1151, Lanus Este, Buenos Aires</li>
+             <li>haalconstrucciones@gmail.com</li>
             </ul>
         </div>
         <span>Todos los derechos reservados</span>
     </footer>
     
-
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

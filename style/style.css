@@ -1,16 +1,14 @@
-/* ==========================
-   VARIABLES GLOBALES
-========================== */
+
 :root {
     --primary-font: "Quicksand", sans-serif;
-    --bg-color: #f7f7f7;
+    --bg-color: #f2f4f7;
     --header-color: #073763;
     --subheader-color: #073763;
-    --link-color: #FFCE32;
+    --link-color: #ffce32;
     --text-color: black;
     --button-bg-color: #1d63ff;
     --button-text-color: #ffce32;
-    --footer-color: #FFCE32;
+    --footer-color: #ffce32;
 }
 
 /* ==========================
@@ -29,7 +27,7 @@ h1, h2, h3 {
 
 p {
     color: var(--text-color);
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 20px;
 }
 
@@ -51,6 +49,7 @@ img:hover {
 
 h3:hover {
     color: #d0893f;
+    text-decoration: underline;
 }
 
 /* ==========================
@@ -61,12 +60,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 5px 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.logo {
+    max-height: 80px; 
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    width: 250px;
-    height: auto;
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .navbar {
@@ -100,7 +110,10 @@ header {
     padding: 0 25px;
     justify-content: flex-start;
 }
-
+.banner-up nav.navbar ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
 /* ==========================
    BOTONES
 ========================== */
@@ -119,8 +132,8 @@ header {
 }
 
 .boton:hover {
-    background-color: #333;
-    color: white;
+    background-color: #d0bb1d;
+    color: rgb(37, 10, 243);
 }
 
 /* ==========================
@@ -135,8 +148,8 @@ header {
 
 .main-content {
     width: 100%;
-    background-color: #eaeaea;
-    padding: 5px;
+    padding: 0px;
+    background-color: var(--bg-color); /* antes era blanco */    
 }
 
 .titulos {
@@ -184,7 +197,7 @@ header {
 }
 
 /* ==========================
-   FOOTER CORREGIDO
+          FOOTER 
 ========================== */
 footer {
     background-color: var(--header-color);
@@ -216,7 +229,6 @@ footer nav.navbar ul {
 footer nav.navbar ul li a {
     text-decoration: none;
     color: var(--footer-color);
-    font-weight: bold;
 }
 
 footer nav.navbar ul li a:hover {
@@ -262,7 +274,7 @@ footer span {
     color: var(--header-color);
     font-family: var(--primary-font);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .form-row {
@@ -339,9 +351,31 @@ input, textarea {
 }
 
 /* ==========================
-   MEDIA QUERIES FOOTER
+     MEDIA QUERIES
 ========================== */
+
+
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navbar {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 10px 15px;
+    }
+
     .contacto-datos-mapa {
         flex-direction: column;
         align-items: center;
@@ -358,12 +392,6 @@ input, textarea {
     }
 }
 
-.instructivos-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 30px;
-}
 
 .video-box {
     text-align: center;
