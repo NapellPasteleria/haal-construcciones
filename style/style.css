@@ -73,10 +73,9 @@ header {
 }
 
 .logo {
-    max-height: 80px; 
-    display: flex;
-    align-items: center;
-}
+    max-width: 150px;
+    height: auto;
+  }
 
 .logo img {
     height: 80px;
@@ -94,19 +93,26 @@ header {
 }
 
 .navbar ul {
-    display: inline-flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    align-items: center;
-}
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
 .navbar a {
     color: var(--link-color);
     text-decoration: none;
     padding: 15px 20px;
     display: inline-flex;
 }
+
+.navbar li a {
+    text-decoration: none;
+    color: var(--link-color)
+}
+
 .inicio {
     background-color: var(--header-color);
     display: inline-flex;
@@ -118,12 +124,13 @@ header {
 
 .banner-up {
     background-color: var(--header-color);
-    height: 15vh;
     display: flex;
     align-items: center;
-    padding: 0 25px;
-    justify-content: flex-start;
-}
+    justify-content: space-between;
+    flex-wrap: wrap; /* importante para responsividad */
+    padding: 10px;
+  }
+
 .banner-up nav.navbar ul li a:hover {
     text-decoration: underline;
     color: white;
@@ -132,19 +139,15 @@ header {
 /* ==========================
    BOTONES
 ========================== */
+
 .boton {
-    color: var(--button-text-color);
+    padding: 8px 12px;
     background-color: var(--button-bg-color);
-    font-family: var(--primary-font);
-    display: flex;
-    padding: 10px;
-    margin: 10px;
-    max-width: 200px;
-    text-align: center;
-    line-height: 20px;
-    justify-content: center;
-    flex-direction: column;
-}
+    color: var(--button-text-color);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
 
 .boton:hover {
     background-color: #d0bb1d;
@@ -391,28 +394,17 @@ input, textarea {
      MEDIA QUERIES
 ========================== */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
         padding: 15px;
     }
 
-    .banner-up {
-        height: 10vh;
-    }
-
-    .navbar {
+     .navbar {
         flex-direction: column;
-        align-items: center;
         width: 100%;
         margin-top: 10px;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
     }
 
     .navbar a {
@@ -459,13 +451,71 @@ input, textarea {
         font-size: 1.2rem;
     }
 
+    .banner-up, .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
     .boton {
-        padding: 8px; 
-        margin: 8px;
-        max-width: 180px; 
+        align-self: stretch;
+        width: 100%;
+        text-align: center;
     }
 }
 
+@media screen and (max-width: 425px) {
+    body {
+      display: flex
+    }
+    
+    .logo, .navbar, .inicio {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton {
+        padding: 8px; 
+        margin: 8px;
+        width: 100px; 
+        flex-direction: column;
+    }
+
+    nav.navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+    }
+    .banner-up{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+
+}
 .video-box {
     text-align: center;
 }
