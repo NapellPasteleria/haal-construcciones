@@ -129,17 +129,6 @@ header {
     color: white;
 }
 
-.modelos {
-    text-align: center;
-}
-
-.modelos img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
 /* ==========================
    BOTONES
 ========================== */
@@ -165,6 +154,18 @@ header {
 /* ==========================
    SECCIONES Y CONTENIDO
 ========================== */
+
+.modelos {
+    text-align: center;
+}
+
+.modelos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .container {
     width: 100%;
     margin: 0;
@@ -192,7 +193,7 @@ header {
 }
 
 /* ==========================
-   GRID DE PRODUCTOS
+   GRID Y MEDIA DE PRODUCTOS
 ========================== */
 .productos-grid, .instructivos-grid {
     display: grid;
@@ -220,6 +221,15 @@ header {
     .productos-grid {
         grid-template-columns: 1fr;
     }
+    .mejores-modelos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modelos img {
+        width: 100%; 
+    }
 }
 
 /* ==========================
@@ -238,8 +248,6 @@ footer hr {
     border-top: 2px solid var(--footer-color);
     margin: 20px 0;
 }
-
-
 
 footer nav.navbar {
     margin-bottom: 20px;
@@ -288,7 +296,7 @@ footer span {
 }
 
 /* ==========================
-   FORMULARIOS CONTACTO
+   FORMULARIO DE CONTACTO
 ========================== */
 .contacto-container {
     max-width: 800px;
@@ -383,7 +391,6 @@ input, textarea {
      MEDIA QUERIES
 ========================== */
 
-
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -391,20 +398,28 @@ input, textarea {
         padding: 15px;
     }
 
+    .banner-up {
+        height: 10vh;
+    }
+
     .navbar {
-        margin-top: 10px;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        margin-top: 10px;
     }
 
     .navbar ul {
         flex-direction: column;
+        align-items: center;
+        padding: 0;
     }
 
     .navbar a {
         padding: 10px 15px;
+        text-align: center;
     }
-
+    
     .contacto-datos-mapa {
         flex-direction: column;
         align-items: center;
@@ -419,8 +434,6 @@ input, textarea {
     .mapa-contacto iframe {
         height: 250px;
     }
-}
-@media (max-width: 768px) {
     .mejores-modelos {
         display: flex;
         flex-direction: column;
@@ -435,6 +448,21 @@ input, textarea {
     .modelos img {
         width: 100%;
         height: auto;
+    }
+
+    p {
+        font-size: 0.9rem; 
+        margin: 15px; 
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    .boton {
+        padding: 8px; 
+        margin: 8px;
+        max-width: 180px; 
     }
 }
 
