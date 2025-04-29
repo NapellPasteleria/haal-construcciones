@@ -1,90 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
 
-    <link rel="stylesheet" href="../style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+
+  <link rel="stylesheet" href="../style/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+
 <body>
-      <header>
-        <div class="banner-up"> 
-          <img src="../img/haal-logo.jpg" class="logo" alt="Logo Haal">
+  <header>
+    <a href="../index.html" class="logo">
+      <img src="../img/haal-logo.jpg" alt="Logo Haal">
+    </a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../pages/quienes_somos.html">Quienes somos</a></li>
+        <li><a href="../pages/productos.html">Productos</a></li>
+        <li><a href="../pages/instructivos_de_instalacion.html">instructivos de instalacion</a></li>
+        <li><a href="../pages/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  
+  <main class="contacto-container">
+    <h1>Dejanos tu consulta</h1>
+    <form action="mailto:haalconstrucciones@gmail.com" method="post" enctype="text/plain">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
         </div>
-        <a class="inicio" href="../index.html">volver al Inicio</a>
-        
-      </header>
-      <hr>
-    <main class="contacto-container">
-        <h1>Dejanos tu consulta</h1>
-        <form action="mailto:haalconstrucciones@gmail.com" method="post" enctype="text/plain">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="boton">Enviar</button>
-        </form>
-    </main>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+  </main>
 
 
-    <div class="contacto-datos-mapa">
-        <div class="datos-contacto">
-          <h2>Nuestros Datos</h2>
-          <ul>
-            <li><strong>Teléfono:</strong> 11.6379-8755</li>
-            <li><strong>Dirección:</strong> Tucumán 1151</li>
-            <li><strong>Localidad:</strong> Lanús Este, Buenos Aires</li>
-            <li><strong>Email:</strong> haalconstrucciones@gmail.com</li>
-          </ul>
-        </div>
-      
-        <div class="mapa-contacto">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.238621464307!2d-58.3928508847698!3d-34.64589328044805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd406b3a40cf%3A0x46fdba21b7fa9012!2sTucum%C3%A1n%201151%2C%20B1824%20Lan%C3%BAs%20Este%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1713121339712!5m2!1ses!2sar" 
-            width="100%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+  <div class="contacto-datos-mapa">
+    <div class="datos-contacto">
+      <h2>Nuestros Datos</h2>
+      <ul>
+        <li><strong>Teléfono:</strong> 11.6379-8755</li>
+        <li><strong>Dirección:</strong> Tucumán 1151</li>
+        <li><strong>Localidad:</strong> Lanús Este, Buenos Aires</li>
+        <li><strong>Email:</strong> haalconstrucciones@gmail.com</li>
+      </ul>
     </div>
 
-    <footer>
-        <hr>
+    <div class="mapa-contacto">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.238621464307!2d-58.3928508847698!3d-34.64589328044805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd406b3a40cf%3A0x46fdba21b7fa9012!2sTucum%C3%A1n%201151%2C%20B1824%20Lan%C3%BAs%20Este%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1713121339712!5m2!1ses!2sar"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">volver al Inicio</a></li>
-                <li><a href="../pages/quienes_somos.html">Quienes somos</a></li>
-                <li><a href="../pages/productos.html">Productos</a></li>
-                <li><a href="../pages/contacto.html">Contacto</a></li>
-                <Li><a href="../pages/instructivos_de_instalacion.html">Instructivos de instalación</a></Li>
-            </ul>
-        </nav>
+  <footer>
+    <hr>
 
-        <div class="nuestros-datos"> 
-           <ul>
-            <li>Whatsapp: 11-6379-8755</li>
-            <li>Tucuman 1151, Lanus Este, Buenos Aires</li>
-            <li>haalconstrucciones@gmail.com</li>
-           </ul>
-       </div>
-       <span>Todos los derechos reservados</span>
-   </footer>
+    <nav class="navbar">
+      <ul>
+        <li><a href="../index.html">volver al Inicio</a></li>
+        <li><a href="../pages/quienes_somos.html">Quienes somos</a></li>
+        <li><a href="../pages/productos.html">Productos</a></li>
+        <li><a href="../pages/contacto.html">Contacto</a></li>
+        <Li><a href="../pages/instructivos_de_instalacion.html">Instructivos de instalación</a></Li>
+      </ul>
+    </nav>
+
+    <div class="nuestros-datos">
+      <ul>
+        <li>Whatsapp: 11-6379-8755</li>
+        <li>Tucuman 1151, Lanus Este, Buenos Aires</li>
+        <li>haalconstrucciones@gmail.com</li>
+      </ul>
+    </div>
+    <span>Todos los derechos reservados</span>
+  </footer>
 </body>
+
 </html>
