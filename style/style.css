@@ -1,6 +1,6 @@
 :root {
     --primary-font: "Quicksand", sans-serif;
-    --bg-color: #cdd1d5;
+    --bg-color: #e3e4e5;
     --header-color: #073763;
     --link-color: #ffce32;
     --text-color: black;
@@ -9,12 +9,21 @@
     --footer-color: #ffce32;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 /* ==========================
    ESTILOS GENERALES
 ========================== */
 body {
     background-color: var(--bg-color);
     font-family: var(--primary-font);
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -23,12 +32,17 @@ h3 {
     color: var(--header-color);
     text-align: center;
     font-family: var(--primary-font);
+    margin-bottom: 20px;
 }
 
 p {
     color: var(--text-color);
+    font-family: var(--primary-font);
     font-size: 1rem;
     margin: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 a {
@@ -43,6 +57,7 @@ h3 {
 
 .pdf {
     color: #073763;
+    font-family: var(--primary-font);
 }
 
 a:hover {
@@ -53,10 +68,11 @@ a:hover {
 img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
 h3:hover {
-    color: #d0893f;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
@@ -72,22 +88,30 @@ header {
     width: 100%;
     border: solid var(--header-color);
     margin: 0px;
-    
+    padding: 5px;
     text-align: center;
     font-family: var(--primary-font);
-    padding: 10px;
     box-sizing: border-box;
+}
+
+.banner {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 header nav.navbar ul {
     list-style: none;
-  
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px 0;
+    gap: 5px;
+    padding: 5px 0;
     box-sizing: border-box;
 }
 
@@ -101,20 +125,12 @@ header nav.navbar ul li a:hover {
     color: var(--bg-color);
 }
 
-
 .logo {
-    max-width: 150px;
-    height: auto;
-}
-
-.logo img {
-    height: 80px;
+    height: 50px;
     width: auto;
-    max-width: 100%;
+    max-width: 80%;
     object-fit: contain;
 }
-
-
 
 /* ======================
     BOTON PRESUPUESTO
@@ -134,28 +150,23 @@ header nav.navbar ul li a:hover {
     color: var(--button-bg-color);
 }
 
+
 /* ==========================
    SECCIONES Y CONTENIDO
 ========================== */
 
-.modelos {
+.lineas {
     text-align: center;
 }
 
-.modelos img {
+.lineas img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0;
+    margin: 20px auto 0;
     padding: 20px;
+    border-radius: 8px;
 }
-
-.container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 
 .titulos {
     text-align: center;
@@ -164,35 +175,150 @@ header nav.navbar ul li a:hover {
     font-weight: bold;
 }
 
-.mejores-modelos {
+.mejores-lineass {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.mejores-modelos div img {
+.mejores-lineas div img {
     display: block;
     margin: 1rem auto;
     max-width: 100%;
     height: auto
 }
 
+.info {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 8px;
+    text-align: center;
+}
+
+div nav ul {
+    list-style: disc inside;
+    font-size: 1rem;
+    padding-left: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.garantia {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 8px;
+}
+
+.video-box {
+    text-align: center;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+}
+
+/* ==========================
+   FORMULARIO DE CONTACTO
+========================== */
+.contacto-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-container h1 {
+    color: var(--header-color);
+    font-family: var(--primary-font);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto-container .boton {
+    align-self: center;
+    margin-top: 10px;
+}
+
+
+/* ==========================
+   DATOS + MAPA
+========================== */
+.contacto-datos-mapa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.datos-contacto {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.datos-contacto h2 {
+    color: var(--header-color);
+    margin-bottom: 15px;
+}
+
+.datos-contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.datos-contacto li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.mapa-contacto {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
 /* ==========================
    GRID Y MEDIA DE PRODUCTOS
 ========================== */
 
-@media (max-width: 768px) {
-    .instructivos-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .instructivos-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
 .productos-grid,
 .instructivos-grid {
     display: grid;
@@ -210,26 +336,9 @@ header nav.navbar ul li a:hover {
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .productos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .productos-grid, .instructivos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .mejores-modelos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .modelos img {
-        width: 100%;
-    }
+.productos-grid p {
+    font-family: var(--primary-font);
+    text-align: center;
 }
 
 /* ==========================
@@ -238,7 +347,7 @@ header nav.navbar ul li a:hover {
 footer {
     background-color: var(--header-color);
     color: var(--footer-color);
-    padding: 30px 20px;
+    padding: 10px 10px;
     text-align: center;
     font-family: var(--primary-font);
 }
@@ -246,11 +355,12 @@ footer {
 footer hr {
     border: none;
     border-top: 2px solid var(--footer-color);
-    margin: 20px 0;
+    margin: 1rem 0;
+    margin-top: 0;
 }
 
 footer nav.navbar {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 footer nav.navbar ul {
@@ -296,103 +406,10 @@ footer span {
 }
 
 /* ==========================
-   FORMULARIO DE CONTACTO
-========================== */
-.contacto-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px 30px;
-    background-color: var(--bg-color);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.contacto-container h1 {
-    color: var(--header-color);
-    font-family: var(--primary-font);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 200px;
-    margin-bottom: 15px;
-}
-
-input,
-textarea {
-    padding: 10px;
-    font-family: var(--primary-font);
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contacto-container .boton {
-    align-self: center;
-    margin-top: 10px;
-}
-
-/* ==========================
-   DATOS + MAPA
-========================== */
-.contacto-datos-mapa {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.datos-contacto {
-    flex: 1;
-    min-width: 250px;
-    background-color: var(--bg-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.datos-contacto h2 {
-    color: var(--header-color);
-    margin-bottom: 15px;
-}
-
-.datos-contacto ul {
-    list-style: none;
-    padding: 0;
-}
-
-.datos-contacto li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.mapa-contacto {
-    flex: 1;
-    min-width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-/* ==========================
      MEDIA QUERIES
 ========================== */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
@@ -428,18 +445,18 @@ textarea {
         height: 250px;
     }
 
-    .mejores-modelos {
+    .mejores-lineas {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .modelos {
+    .lineas {
         width: 90%;
         margin-bottom: 0px;
     }
 
-    .modelos img {
+    .lineas img {
         width: 100%;
         height: auto;
     }
@@ -460,14 +477,65 @@ textarea {
         width: 100%;
         text-align: center;
     }
+
+    .instructivos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.video-box {
-    text-align: center;
+@media (max-width: 480px) {
+
+    .productos-grid,
+    .instructivos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mejores-lineas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .lineas img {
+        width: 100%;
+    }
+
+    .lineas {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
-.video-box iframe {
-    width: 100%;
-    height: 315px;
-    border-radius: 8px;
+/* === Sobrescribe estilos Bootstrap que no quiero === */
+.custom-navbar {
+    background-color: var(--header-color);
+}
+
+.custom-navbar .nav-link {
+    color: var(--footer-color);
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--bg-color);
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: var(--footer-color);
+}
+
+.micarrusel {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.micarrusel img {
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }

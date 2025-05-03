@@ -1,0 +1,486 @@
+// VARIABLES
+$primary-font: "Quicksand", sans-serif;
+$bg-color: #e3e4e5;
+$header-color: #073763;
+$link-color: #ffce32;
+$text-color: black;
+$button-bg-color: #073763;
+$button-text-color: #ffce32;
+$footer-color: #ffce32;
+
+// RESET DE ESTILOS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ESTILOS GENERALES
+body {
+  background-color: $bg-color;
+  font-family: $primary-font;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  h1,
+  h2,
+  h3 {
+    color: $header-color;
+    text-align: center;
+    font-family: $primary-font;
+  }
+
+  p {
+    color: $text-color;
+    font-size: 1rem;
+    margin: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: $primary-font;
+    color: $link-color;
+
+    &:hover {
+      text-decoration: underline;
+      color: $bg-color;
+    }
+  }
+
+  h3 {
+    font-size: 1.2rem;
+
+    &:hover {
+      color: #d0893f;
+      text-decoration: underline;
+    }
+  }
+
+  .pdf {
+    color: $header-color;
+  }
+
+  img {
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .garantia {
+    width: 80%;
+    padding: auto;
+    height: auto;
+  }
+}
+
+// HEADER Y NAVBAR
+header {
+  background-color: $header-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  border: solid $header-color;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: $primary-font;
+  box-sizing: border-box;
+
+  .navbar {
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 5px 0;
+      box-sizing: border-box;
+
+      li a {
+        text-decoration: none;
+        color: $footer-color;
+
+        &:hover {
+          text-decoration: underline;
+          color: $bg-color;
+        }
+      }
+    }
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+    max-width: 80%;
+    object-fit: contain;
+  }
+}
+
+// BOTON PRESUPUESTO
+.boton {
+  padding: 8px 12px;
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #d0bb1d;
+    color: $button-bg-color;
+  }
+}
+
+// SECCIONES Y CONTENIDO
+.modelos {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.titulos {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.mejores-modelos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  div img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// GRID Y MEDIA DE PRODUCTOS
+@media (max-width: 768px) {
+  .instructivos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .instructivos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .productos-grid,
+  .instructivos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mejores-modelos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modelos img {
+    width: 100%;
+  }
+}
+
+// FOOTER
+footer {
+  background-color: $header-color;
+  color: $footer-color;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: $primary-font;
+
+  hr {
+    border: none;
+    border-top: 2px solid $footer-color;
+    margin: 1rem 0;
+    margin-top: 0;
+  }
+
+  .navbar {
+    margin-bottom: 20px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      li a {
+        text-decoration: none;
+        color: $footer-color;
+
+        &:hover {
+          text-decoration: underline;
+          color: $bg-color;
+        }
+      }
+    }
+  }
+
+  .nuestros-datos {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+
+      li {
+        margin: 5px 0;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 10px;
+      color: $bg-color;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// FORMULARIO DE CONTACTO
+.contacto-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    color: $header-color;
+    font-family: $primary-font;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 15px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    font-family: $primary-font;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .boton {
+    align-self: center;
+    margin-top: 10px;
+  }
+}
+
+// DATOS + MAPA
+.contacto-datos-mapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+
+  .datos-contacto {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      color: $header-color;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+  }
+
+  .mapa-contacto {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// MEDIA QUERIES PARA TAMAÑOS MÁS PEQUEÑOS
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .contacto-datos-mapa {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .datos-contacto,
+  .mapa-contacto {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .mapa-contacto iframe {
+    height: 250px;
+  }
+
+  .mejores-modelos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modelos {
+    width: 90%;
+    margin-bottom: 0;
+  }
+
+  .modelos img {
+    width: 100%;
+    height: auto;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 15px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .boton {
+    align-self: stretch;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.video-box {
+  text-align: center;
+
+  iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+  }
+}
+
+// Sobrescribe estilos Bootstrap
+.custom-navbar {
+  background-color: $header-color;
+}
+
+.custom-navbar .nav-link {
+  color: $footer-color;
+}
+
+.custom-navbar .nav-link:hover {
+  color: $bg-color;
+  text-decoration: underline;
+}
+
+.navbar-toggler {
+  border-color: $footer-color;
+}
+.info {
+    max-width: 800px;        // o el ancho que prefieras
+    margin: 40px auto;       // centra horizontalmente y da separación vertical
+    padding: 20px;           // espacio interno
+    text-align: center;      // alinea todo el texto al centro
+    background-color: white; // opcional: mejora la lectura si el fondo es gris o de color
+    border-radius: 10px;     // bordes suaves
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // sombra sutil
+  
+    h1 {
+      color: $header-color;  // o cualquier color fuerte
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      list-style: disc inside;
+      padding-left: 0;
+      margin-bottom: 20px;
+      text-align: left; // mejora la legibilidad de listas
+    }
+  
+    .garantia {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto 0;
+      border-radius: 8px; // opcional
+    }
+  }
+  
