@@ -20,47 +20,6 @@ $footer-color: #ffce32;
 }
 
 // ==========================
-// HEADER Y NAVBAR
-// ==========================
-header {
-  background-color: $header-color;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  border: solid $header-color;
-  text-align: center;
-
-  .navbar {
-    ul {
-      list-style: none;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 5px;
-      padding: 5px 0;
-
-      li a {
-        color: $footer-color;
-
-        &:hover {
-          text-decoration: underline;
-          color: $bg-color;
-        }
-      }
-    }
-  }
-
-  .logo {
-    height: 50px;
-    width: auto;
-    max-width: 80%;
-    object-fit: contain;
-  }
-}
-// ==========================
 // ESTILOS GENERALES
 // ==========================
 body {
@@ -110,6 +69,48 @@ img:hover {
 
 .pdf {
   color: $header-color;
+}
+
+// ==========================
+// HEADER Y NAVBAR
+// ==========================
+header {
+  background-color: $header-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  border: solid $header-color;
+  text-align: center;
+
+  .navbar {
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 5px 0;
+
+      li a {
+        color: $footer-color;
+
+        &:hover {
+          text-decoration: underline;
+          color: $bg-color;
+        }
+      }
+    }
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+    max-width: 80%;
+    object-fit: contain;
+  }
 }
 
 // ==========================

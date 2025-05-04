@@ -4,39 +4,6 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #073763;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  border: solid #073763;
-  text-align: center;
-}
-header .navbar ul {
-  list-style: none;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  padding: 5px 0;
-}
-header .navbar ul li a {
-  color: #ffce32;
-}
-header .navbar ul li a:hover {
-  text-decoration: underline;
-  color: #e3e4e5;
-}
-header .logo {
-  height: 50px;
-  width: auto;
-  max-width: 80%;
-  object-fit: contain;
-}
-
 body {
   background-color: #e3e4e5;
   font-family: "Quicksand", sans-serif;
@@ -82,6 +49,39 @@ img:hover {
 
 .pdf {
   color: #073763;
+}
+
+header {
+  background-color: #073763;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  border: solid #073763;
+  text-align: center;
+}
+header .navbar ul {
+  list-style: none;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px 0;
+}
+header .navbar ul li a {
+  color: #ffce32;
+}
+header .navbar ul li a:hover {
+  text-decoration: underline;
+  color: #e3e4e5;
+}
+header .logo {
+  height: 50px;
+  width: auto;
+  max-width: 80%;
+  object-fit: contain;
 }
 
 .boton {
