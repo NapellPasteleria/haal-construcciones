@@ -50,19 +50,22 @@ a {
     font-family: var(--primary-font);
     color: var(--link-color);
 }
+a:hover {
+    text-decoration: underline;
+    color: var(--bg-color);
+}
 
 h3 {
     font-size: 1.2rem;
+}
+h3:hover {
+    color: var(--link-color);
+    text-decoration: underline;
 }
 
 .pdf {
     color: #073763;
     font-family: var(--primary-font);
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--bg-color);
 }
 
 img:hover {
@@ -71,10 +74,7 @@ img:hover {
     object-fit: cover;
 }
 
-h3:hover {
-    color: var(--link-color);
-    text-decoration: underline;
-}
+
 
 /* ==========================
    HEADER Y NAVBAR
@@ -150,7 +150,6 @@ header nav.navbar ul li a:hover {
     color: var(--button-bg-color);
 }
 
-
 /* ==========================
    SECCIONES Y CONTENIDO
 ========================== */
@@ -175,7 +174,7 @@ header nav.navbar ul li a:hover {
     font-weight: bold;
 }
 
-.mejores-lineass {
+.mejores-lineas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
