@@ -20,56 +20,6 @@ $footer-color: #ffce32;
 }
 
 // ==========================
-// ESTILOS GENERALES
-// ==========================
-body {
-  background-color: $bg-color;
-  font-family: $primary-font;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3 {
-  color: $header-color;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.2rem;
-
-  &:hover {
-    color: #d0893f;
-    text-decoration: underline;
-  }
-}
-
-p {
-  color: $text-color;
-  font-size: 1rem;
-  margin: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: $link-color;
-
-  &:hover {
-    text-decoration: underline;
-    color: $bg-color;
-  }
-}
-
-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-.pdf {
-  color: $header-color;
-}
-
-// ==========================
 // HEADER Y NAVBAR
 // ==========================
 header {
@@ -110,6 +60,57 @@ header {
     object-fit: contain;
   }
 }
+// ==========================
+// ESTILOS GENERALES
+// ==========================
+body {
+  background-color: $bg-color;
+  font-family: $primary-font;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: $header-color;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+p {
+  color: $text-color;
+  font-size: 1rem;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover {
+    text-decoration: underline;
+    color: $bg-color;
+  }
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.pdf {
+  color: $header-color;
+}
 
 // ==========================
 // BOTÓN
@@ -122,7 +123,7 @@ header {
   margin-top: 10px;
 
   &:hover {
-    background-color: #d0bb1d;
+    background-color: #ffce32;
     color: $button-bg-color;
   }
 }
@@ -422,6 +423,7 @@ footer {
 
     img {
       width: 100%;
+      height: auto;
     }
   }
 
@@ -437,6 +439,7 @@ footer {
   }
 
   .boton {
+    align-self: stretch;
     width: 100%;
     text-align: center;
   }
@@ -448,6 +451,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
   .instructivos-grid,
   .productos-grid {
     grid-template-columns: 1fr;
@@ -455,6 +459,9 @@ footer {
 
   .mejores-lineas {
     padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .lineas {
@@ -464,6 +471,21 @@ footer {
     img {
       width: 100%;
     }
+  }
+  .contacto-datos-mapa {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .datos-contacto,
+  .mapa-contacto {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .mapa-contacto iframe {
+    height: 250px;
   }
 }
 
