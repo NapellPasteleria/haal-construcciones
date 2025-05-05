@@ -379,19 +379,6 @@ footer .nuestros-datos span {
   .lineas img {
     width: 100%;
   }
-  .contacto-datos-mapa {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .datos-contacto,
-  .mapa-contacto {
-    width: 100%;
-    max-width: 90%;
-  }
-  .mapa-contacto iframe {
-    height: 250px;
-  }
 }
 .custom-navbar {
   background-color: #073763;
