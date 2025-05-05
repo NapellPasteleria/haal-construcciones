@@ -10,6 +10,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 h1,
@@ -161,11 +162,7 @@ header .logo {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contacto-container h1 {
-  color: #073763;
-  text-align: center;
-  margin-bottom: 20px;
+  align-content: center h1;
 }
 .contacto-container .form-row {
   display: flex;
@@ -208,10 +205,7 @@ header .logo {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-.contacto-datos-mapa .datos-contacto h2 {
-  color: #073763;
-  margin-bottom: 15px;
+  align-content: center h2;
 }
 .contacto-datos-mapa .datos-contacto ul {
   list-style: none;
@@ -227,10 +221,7 @@ header .logo {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-.contacto-datos-mapa .mapa-contacto iframe {
-  width: 100%;
-  height: 100%;
+  align-content: center iframe;
 }
 
 .productos-grid,
@@ -321,14 +312,17 @@ footer .nuestros-datos span {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    align-content: center;
   }
   .datos-contacto,
   .mapa-contacto {
     width: 100%;
     max-width: 90%;
+    align-content: center;
   }
   .mapa-contacto iframe {
     height: 250px;
+    align-content: center;
   }
   .mejores-lineas {
     flex-direction: column;
