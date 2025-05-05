@@ -95,6 +95,7 @@ header .logo {
 .boton:hover {
   background-color: #ffce32;
   color: #073763;
+  animation: pulse 0.6s ease-in-out;
 }
 
 .lineas {
@@ -162,7 +163,12 @@ header .logo {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  align-content: center h1;
+  animation: fadeInUp 0.8s ease-out both;
+}
+.contacto-container h1 {
+  color: #073763;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .contacto-container .form-row {
   display: flex;
@@ -205,7 +211,10 @@ header .logo {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  align-content: center h2;
+}
+.contacto-datos-mapa .datos-contacto h2 {
+  color: #073763;
+  margin-bottom: 15px;
 }
 .contacto-datos-mapa .datos-contacto ul {
   list-style: none;
@@ -221,7 +230,7 @@ header .logo {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  align-content: center iframe;
+  align-content: center;
 }
 
 .productos-grid,
@@ -397,6 +406,28 @@ footer .nuestros-datos span {
   height: auto;
   max-height: 400px;
   object-fit: cover;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
