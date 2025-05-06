@@ -87,7 +87,7 @@ h2,
 h3 {
   @extend %centrado;
   color: $header-color;
-}
+  }
 
 h3 {
   font-size: 1.2rem;
@@ -99,10 +99,13 @@ h2{
   }
 }
 
-p {
+p.info-puertas {
+  @extend %centrado;
+  max-width: 600px; 
+  margin: 1rem auto;
   color: $text-color;
   font-size: 1rem;
-  margin: 20px;
+  line-height: 1.5;
 }
 
 a {

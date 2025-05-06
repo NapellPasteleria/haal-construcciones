@@ -19,7 +19,7 @@
     transform: scale(1);
   }
 }
-h1,
+p.info-puertas, h1,
 h2,
 h3 {
   text-align: center;
@@ -56,10 +56,12 @@ h2:hover {
   text-decoration: underline;
 }
 
-p {
+p.info-puertas {
+  max-width: 600px;
+  margin: 1rem auto;
   color: #022342;
   font-size: 1rem;
-  margin: 20px;
+  line-height: 1.5;
 }
 
 a {
