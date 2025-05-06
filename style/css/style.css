@@ -1,3 +1,31 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,19 +45,19 @@ h1,
 h2,
 h3 {
   color: #073763;
-  text-align: center;
 }
 
 h3 {
   font-size: 1.2rem;
 }
-h3:hover {
+
+h2:hover {
   color: #ffce32;
   text-decoration: underline;
 }
 
 p {
-  color: black;
+  color: #022342;
   font-size: 1rem;
   margin: 20px;
 }
@@ -50,6 +78,10 @@ img:hover {
 
 .pdf {
   color: #073763;
+}
+.pdf:hover {
+  text-decoration: underline;
+  color: #051320;
 }
 
 header {
@@ -75,8 +107,8 @@ header .navbar ul li a {
   color: #ffce32;
 }
 header .navbar ul li a:hover {
+  color: rgb(203, 154.4780487805, 0);
   text-decoration: underline;
-  color: #e3e4e5;
 }
 header .logo {
   height: 50px;
@@ -91,11 +123,16 @@ header .logo {
   color: #ffce32;
   border-radius: 5px;
   margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .boton:hover {
+  padding: 8px 12px;
   background-color: #ffce32;
   color: #073763;
-  animation: pulse 0.6s ease-in-out;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: pulse 1s ease-in-out both;
 }
 
 .lineas {
@@ -252,6 +289,8 @@ header .logo {
 .productos-grid p,
 .instructivos-grid p {
   text-align: center;
+  max-width: 400px;
+  margin: 1rem auto;
 }
 
 footer {
@@ -382,6 +421,10 @@ footer .nuestros-datos span {
   .lineas img {
     width: 100%;
   }
+  .contacto-datos-mapa {
+    gap: 10px;
+    padding: 10px;
+  }
 }
 .custom-navbar {
   background-color: #073763;
@@ -406,28 +449,6 @@ footer .nuestros-datos span {
   height: auto;
   max-height: 400px;
   object-fit: cover;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

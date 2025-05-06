@@ -1,3 +1,34 @@
+@use "sass:color";
+
+//======================
+// ANIMACIONES
+//======================
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 // ==========================
 // VARIABLES
 // ==========================
@@ -5,10 +36,30 @@ $primary-font: "Quicksand", sans-serif;
 $bg-color: #e3e4e5;
 $header-color: #073763;
 $link-color: #ffce32;
-$text-color: black;
+$text-color: #022342;
 $button-bg-color: #073763;
 $button-text-color: #ffce32;
 $footer-color: #ffce32;
+
+//============================
+// PARA EL USO DE @EXTEND EN LINEA 86
+//============================
+%centrado {
+  text-align: center;
+  font-family: $primary-font;
+}
+
+//==============================
+// @MIXIN PARA EL BOTON DE LA LINEA 176 @INCLUDE
+//==============================
+@mixin btn-std($bg, $color) {
+  padding: 8px 12px;
+  background-color: $bg;
+  color: $color;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 // ==========================
 // RESET
@@ -34,13 +85,14 @@ body {
 h1,
 h2,
 h3 {
+  @extend %centrado;
   color: $header-color;
-  text-align: center;
 }
 
 h3 {
   font-size: 1.2rem;
-
+}
+h2{ 
   &:hover {
     color: $link-color;
     text-decoration: underline;
@@ -70,6 +122,12 @@ img:hover {
 
 .pdf {
   color: $header-color;
+
+  &:hover {
+    text-decoration: underline;
+    color: #051320;
+  }
+
 }
 
 // ==========================
@@ -99,9 +157,9 @@ header {
         color: $footer-color;
 
         &:hover {
+          color: color.adjust($footer-color, $lightness: -20%);
           text-decoration: underline;
-          color: $bg-color;
-        }
+        }  
       }
     }
   }
@@ -118,18 +176,14 @@ header {
 // BOTÓN
 // ==========================
 .boton {
-  padding: 8px 12px;
-  background-color: $button-bg-color;
-  color: $button-text-color;
-  border-radius: 5px;
-  margin-top: 10px;
+  @include btn-std($button-bg-color, $button-text-color);
 
   &:hover {
-    background-color: #ffce32;
-    color: $button-bg-color;
-    animation: pulse 0.6s ease-in-out;
+    @include btn-std($button-text-color, $button-bg-color);
+    animation: pulse 1s ease-in-out both;
   }
 }
+
 
 // ==========================
 // SECCIONES Y CONTENIDO
@@ -207,7 +261,7 @@ header {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 0.8s ease-out both; 
+  animation: fadeInUp 0.8s ease-out both;
 
   h1 {
     color: $header-color;
@@ -286,7 +340,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    align-content: center
+    align-content: center;
 
   }
 }
@@ -312,8 +366,11 @@ header {
 
   p {
     text-align: center;
+    max-width: 400px;
+    margin: 1rem auto;
   }
 }
+
 
 // ==========================
 // FOOTER
@@ -401,19 +458,19 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    align-content: center
+    align-content: center;
   }
 
   .datos-contacto,
   .mapa-contacto {
     width: 100%;
     max-width: 90%;
-    align-content: center
+    align-content: center;
   }
 
   .mapa-contacto iframe {
     height: 250px;
-    align-content: center
+    align-content: center;
   }
 
   .mejores-lineas {
@@ -476,6 +533,11 @@ footer {
       width: 100%;
     }
   }
+
+  .contacto-datos-mapa {
+    gap: 10px;
+    padding: 10px;
+  }
 }
 
 // ==========================
@@ -507,21 +569,4 @@ footer {
     max-height: 400px;
     object-fit: cover;
   }
-}
-// ANIMACIONES
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0%   { transform: scale(1);   }
-  50%  { transform: scale(1.05); }
-  100% { transform: scale(1);   }
 }
