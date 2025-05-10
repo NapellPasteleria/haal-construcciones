@@ -1,0 +1,11 @@
+// ==========================
+// BOTÓN
+// ==========================
+.boton {
+  @include btn-std($button-bg-color, $button-text-color);
+
+  &:hover {
+    @include btn-std($button-text-color, $button-bg-color);
+    animation: pulse 1s ease-in-out both;
+  }
+}

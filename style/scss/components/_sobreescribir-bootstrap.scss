@@ -1,0 +1,30 @@
+// ==========================
+// SOBRESCRIBIR BOOTSTRAP
+// ==========================
+.custom-navbar {
+    background-color: $header-color;
+  
+    .nav-link {
+      color: $footer-color;
+  
+      &:hover {
+        color: $bg-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .navbar-toggler {
+    border-color: $footer-color;
+  }
+  
+  .micarrusel {
+    max-width: 400px;
+    margin: 0 auto;
+  
+    img {
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }

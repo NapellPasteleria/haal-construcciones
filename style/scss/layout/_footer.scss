@@ -1,0 +1,61 @@
+// ==========================
+// FOOTER
+// ==========================
+footer {
+    background-color: $header-color;
+    color: $footer-color;
+    padding: 30px 20px;
+    text-align: center;
+  
+    hr {
+      border: none;
+      border-top: 2px solid $footer-color;
+      margin: 1rem 0 0;
+    }
+  
+    .navbar {
+      margin-bottom: 20px;
+  
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+  
+        li a {
+          color: $footer-color;
+  
+          &:hover {
+            text-decoration: underline;
+            color: $bg-color;
+          }
+        }
+      }
+    }
+  
+    .nuestros-datos {
+      ul {
+        list-style: none;
+        margin: 0 auto 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 0.95rem;
+  
+        li {
+          margin: 5px 0;
+        }
+      }
+  
+      span {
+        display: block;
+        margin-top: 10px;
+        color: $bg-color;
+        font-size: 0.85rem;
+      }
+    }
+  }
+  

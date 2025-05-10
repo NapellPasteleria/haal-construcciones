@@ -1,0 +1,109 @@
+// ==========================
+// MEDIA QUERIES
+// ==========================
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+  
+      a {
+        padding: 5px 10px;
+      }
+    }
+  
+    .contacto-datos-mapa {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      align-content: center;
+    }
+  
+    .datos-contacto,
+    .mapa-contacto {
+      width: 100%;
+      max-width: 90%;
+      align-content: center;
+    }
+  
+    .mapa-contacto iframe {
+      height: 250px;
+      align-content: center;
+    }
+  
+    .mejores-lineas {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lineas {
+      width: 90%;
+      margin-bottom: 0;
+  
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        display: block;
+      }
+    }
+  
+    p {
+      font-size: 0.9rem;
+      margin: 15px;
+    }
+  
+    h1,
+    h2,
+    h3 {
+      font-size: 1rem;
+    }
+  
+    .boton {
+      align-self: stretch;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .instructivos-grid,
+    .productos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+  
+    .instructivos-grid,
+    .productos-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .mejores-lineas {
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lineas {
+      width: 100%;
+      max-width: 400px;
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+    .contacto-datos-mapa {
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+  

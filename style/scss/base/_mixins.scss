@@ -1,0 +1,12 @@
+//==============================
+// @MIXIN PARA EL BOTON DE LA LINEA 176 @INCLUDE
+//==============================
+@mixin btn-std($bg, $color) {
+    padding: 8px 12px;
+    background-color: $bg;
+    color: $color;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  

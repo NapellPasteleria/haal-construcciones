@@ -1,0 +1,68 @@
+// ==========================
+// ESTILOS GENERALES
+// ==========================
+body {
+    background-color: $bg-color;
+    font-family: $primary-font;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  img {
+  max-width: 100%;  
+  height: auto;     
+  display: block;  
+  }
+
+  h1,
+  h2,
+  h3 {
+    @extend %centrado;
+    color: $header-color;
+    }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  h2{ 
+    &:hover {
+      color: $link-color;
+      text-decoration: underline;
+    }
+  }
+  
+  p.info-puertas {
+    @extend %centrado;
+    max-width: 600px; 
+    margin: 1rem auto;
+    color: $text-color;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $link-color;
+  
+    &:hover {
+      text-decoration: underline;
+      color: $bg-color;
+    }
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .pdf {
+    color: $header-color;
+  
+    &:hover {
+      text-decoration: underline;
+      color: #051320;
+    }
+  
+  }
+  
