@@ -1,3 +1,4 @@
+@charset "UTF-8";
 p.info-puertas, h1,
 h2,
 h3 {
@@ -318,6 +319,35 @@ img:hover {
 }
 .whatsapp-button:hover {
   transform: scale(1.1);
+}
+
+.reseñas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+.reseñas .reseña {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reseñas .reseña img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.reseñas .reseña:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.reseñas .reseña:hover img {
+  transform: scale(1.05) rotate(-1deg);
 }
 
 header {
