@@ -21,7 +21,7 @@ haal-construcciones/
 - ├── index.html           # página de inicio
 - └── README.md            # este archivo
 
-## ✨ Características
+## ✨ Características usadas
 
 - **Responsive** con Flexbox y CSS Grid  
 - **SCSS modularizado** en carpetas `base/`, `layout/`, `components/`, `pages/`  
@@ -32,7 +32,7 @@ haal-construcciones/
 
 ---
 
-## 🛠 Tecnologías
+## 🛠 Tecnologías usadas
 
 - **HTML5**  
 - **SCSS (Sass)**  
